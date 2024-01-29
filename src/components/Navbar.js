@@ -7,7 +7,7 @@ const Navbar = () => {
         localStorage.removeItem('token');
     }
     const user = localStorage.getItem('user');
-    let userName = (JSON.parse(localStorage.getItem('user')).name).toUpperCase();
+    let userName = (JSON.parse(localStorage.getItem('user'))?.name).toUpperCase();
     return (
         <div>
             <img src="https://img.freepik.com/free-vector/gradient-coding-logo-template_23-2148809439.jpg"
