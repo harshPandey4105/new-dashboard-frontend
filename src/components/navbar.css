@@ -24,3 +24,13 @@
     font-size: 13px;
     color: white;
 }
+.validations{
+    color: red;
+    font-size: 12px;
+    position: relative;
+    right: 100px;
+}
+.validations-p{
+    position: relative;
+    right: 90px;
+}

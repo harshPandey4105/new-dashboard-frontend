@@ -6,8 +6,6 @@ const Navbar = () => {
         localStorage.removeItem('user');
         localStorage.removeItem('token');
     }
-    // const user = localStorage.getItem('user');
-    // let userName = (JSON.parse(localStorage.getItem('user'))?.name).toUpperCase();
     return (
         <div>
             <img src="https://img.freepik.com/free-vector/gradient-coding-logo-template_23-2148809439.jpg"
@@ -19,9 +17,6 @@ const Navbar = () => {
                         <li><Link to='/update'>Update Product</Link></li>
                         <li><Link to='/profile'>Profile</Link></li>
                         <li><Link onClick={logout} to='/signup'>Logout</Link></li>
-                        {/* {
-                              user ? <span className="user-name">({userName})</span>:<></>
-                        } */}
                         <li className="sideLinks"><Link to='/login'>Login</Link></li>
                         <li className="sideLinks"><Link to='/signup'>Sign up</Link></li>
                     </ul>
