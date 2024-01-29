@@ -12,8 +12,8 @@ const Login = () => {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [error, setError] = useState(false);
-    const getData= async()=>{
-        if ( !email || !password) {
+    const getData= async()=>{ 
+        if ( !email || !password || email===" " || password===" ") {
             return setError(true);
         }
         let f=await fetch('https://dashboard-backend-rho.vercel.app/login',{
@@ -45,7 +45,7 @@ const Login = () => {
                 placeholder="Enter your Email"
                 required
             />
-            {error && !email ?<span className="validations">Please enter valid email</span>:<></>}
+            {error && (!email || email===" ") ?<span className="validations">Please enter valid email</span>:<></>}
             <input
                 type="password"
                 name="password"
@@ -54,7 +54,7 @@ const Login = () => {
                 placeholder="Enter Password"
                 required
             />
-            {error && !password ?<span className="validations validations-p">Please enter valid password</span>:<></>}
+            {error && (!password || password===" ") ?<span className="validations validations-p">Please enter valid password</span>:<></>}
             <button type="button" onClick={getData}>Sign Up</button>
         </div>
     )

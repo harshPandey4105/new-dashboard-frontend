@@ -14,7 +14,7 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
     const getData = async () => {
-        if (!name || !email || !password) {
+        if (!name || !email || !password || name===" " || email===" " || password===" ") {
             return setError(true);
         }
         else {
@@ -41,7 +41,7 @@ const Signup = () => {
                 placeholder="Enter your name"
                 required
             />
-            {error && !name ?<span className="validations">Please enter valid name</span>:<></>}
+            {error && (!name || name===" ") ?<span className="validations">Please enter valid name</span>:<></>}
             <input
                 type="email"
                 name="email"
@@ -50,7 +50,7 @@ const Signup = () => {
                 placeholder="Enter your Email"
                 required
             />
-            {error && !email ?<span className="validations">Please enter valid email</span>:<></>}
+            {error && (!email || email===" ") ?<span className="validations">Please enter valid email</span>:<></>}
             <input
                 type="password"
                 name="password"
@@ -59,7 +59,7 @@ const Signup = () => {
                 placeholder="Enter Password"
                 required
             />
-            {error && !password ?<span className="validations validations-p">Please enter valid password</span>:<></>}
+            {error && (!password || password===" ") ?<span className="validations validations-p">Please enter valid password</span>:<></>}
             <button type="button" onClick={getData}>Sign Up</button>
         </div>
     )
