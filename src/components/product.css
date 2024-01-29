@@ -1,0 +1,45 @@
+.products-list-section{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+.products-list-section ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.products-list-section ul li{
+    list-style-type: none;
+    padding: 10px;
+    width: 150px;
+    height: 30px;
+    border: 2px solid black;
+    text-align: center;
+    background-color: aliceblue;
+    font-weight: 500;
+}
+.products-list-heading ul li{
+    background-color: #6161f6;
+    color: aliceblue;
+    font-weight: bold;
+}
+.update-btn{
+    background-color: #6161f6;
+    color: aliceblue;
+    border: none;
+    padding: 5px;
+    border-radius: 5px ;
+}
+.update-btn:active{
+    background-color: hsl(240, 83%, 79%);
+}
+.searchBar-section input{
+    margin: 40px 0;
+    padding: 20px;
+    width: 400px;
+    background-color: aliceblue;
+}
